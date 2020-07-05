@@ -9,7 +9,7 @@
 ## Usage
  Use the below command to build the containers, make sure to adjust the version and the target-repo!
  
-<pre>docker buildx build --build-arg FUSIONAUTH_VERSION=1.17.3 --force-rm --platform linux/arm/v7,linux/arm64,linux/amd64 -t jerryhopper/fusionauth:1.17.3 --push .</pre>
+<pre>docker buildx build --build-arg FUSIONAUTH_VERSION=1.17.5 --force-rm --platform linux/arm/v7,linux/arm64,linux/amd64 -t jerryhopper/fusionauth-app:1.17.5 --push .</pre>
 
 ## Dockerhub
  https://hub.docker.com/repository/docker/jerryhopper/fusionauth-app
