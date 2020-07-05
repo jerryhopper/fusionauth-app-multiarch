@@ -3,7 +3,7 @@ FROM ubuntu:bionic
 
 ###### get build-arguments  #########
 ARG FUSIONAUTH_VERSION
-ENV FUSIONAUTH_VERSION=1.17.5
+#ENV FUSIONAUTH_VERSION=1.17.5
 
 RUN echo "FusionAuth version :  $FUSIONAUTH_VERSION"
 CMD echo "Running on $(uname -m)"
