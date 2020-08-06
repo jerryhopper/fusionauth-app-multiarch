@@ -3,7 +3,7 @@ FROM ubuntu:bionic
 
 ###### get build-arguments  #########
 ARG FUSIONAUTH_VERSION
-#ENV FUSIONAUTH_VERSION=1.17.5
+#ENV FUSIONAUTH_VERSION=1.17.3
 
 RUN echo "FusionAuth version :  $FUSIONAUTH_VERSION"
 CMD echo "Running on $(uname -m)"
@@ -22,12 +22,12 @@ RUN /bin/sh -c set -eux;\
    ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in\
     aarch64|arm64)\
-        ESUM='81ca31ad90f9bd789a2ca1753d6d83d10f4927876b4a4b9f4b1c4c8cbce85feb';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_aarch64_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='a1132bcfdbf8e97b3158b1d898be7e09b224e65877a59c1b17190f3310f3b139';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-07-28-07-34/OpenJDK14U-jdk_aarch64_linux_hotspot_2020-07-28-07-34.tar.gz';\
         ;;\
     armhf|armv7l)\
-        ESUM='458d091756500dc3013737aa182a14752b3d4ffc358d09532201874ffb8cae22';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_arm_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='a7048c5e4cab6cd5a710c9c964bf036c3bee0d7f500d13b6c6203a0cc24135f6';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-07-28-07-34/OpenJDK14U-jdk_arm_linux_hotspot_2020-07-28-07-34.tar.gz';\
         ;;\
     ppc64el|ppc64le)\
         ESUM='bfdd77112d81256d4e1a859a465dd4dcb670019a5d6cf8260c30e24a0e5947e4';\
@@ -38,8 +38,8 @@ RUN /bin/sh -c set -eux;\
         BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_s390x_linux_hotspot_14.0.1_7.tar.gz';\
         ;;\
     amd64|x86_64)\
-        ESUM='9ddf9b35996fbd784a53fff3e0d59920a7d5acf1a82d4c8d70906957ac146cd1';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_x64_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='da4205936525c3df1ef9c060f20ee0f8971603ddcc7b0c12626d3e8ff6477edf';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-07-28-07-34/OpenJDK14U-jdk_x64_linux_hotspot_2020-07-28-07-34.tar.gz';\
         ;;\
     *)\
         echo "Unsupported arch: ${ARCH}";\
@@ -64,7 +64,7 @@ RUN /bin/sh -c set -eux;\
 ###### set enviroment variables ########################
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 ENV JAVA_VERSION=jdk-14.0.1+7
-ENV JAVA_HOME=/opt/java/openjdk/
+ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=$PATH:$JAVA_HOME/bin
 
 
