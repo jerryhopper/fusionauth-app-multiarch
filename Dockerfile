@@ -18,7 +18,7 @@
 FROM ubuntu:bionic as build
 
 ARG JDK_MODULES=java.base,java.compiler,java.desktop,java.instrument,java.management,java.naming,java.rmi,java.security.jgss,java.security.sasl,java.sql,java.xml.crypto,jdk.attach,jdk.crypto.ec,jdk.jdi,jdk.localedata,jdk.scripting.nashorn,jdk.unsupported
-ARG FUSIONAUTH_VERSION=1.20.1
+ARG FUSIONAUTH_VERSION=0
 RUN ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in\
     aarch64|arm64)\
