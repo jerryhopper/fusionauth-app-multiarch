@@ -1,13 +1,14 @@
 name: ci
-
-on:
-  push:
-    branches: master
-
+on: [push]
 jobs:
   multi:
     runs-on: ubuntu-latest
+    env:
+        FUSIONAUTH_VERSION: 1.20.1
     steps:
+      - 
+        name: identify
+        run: echo ${{ env.FUSIONAUTH_VERSION }}
       -
         name: Checkout
         uses: actions/checkout@v2
@@ -29,8 +30,9 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
-          push: false
+          build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
+          platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/s390x
+          push: true
           tags: |
-            jerryhopper/fusionauth-app:latest
-            jerryhopper/fusionauth-app:1.20.1
+            jerryhopper/demo-multiarch:latest
+            jerryhopper/demo-multiarch:${{ env.FUSIONAUTH_VERSION }}
