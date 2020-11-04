@@ -34,5 +34,5 @@ jobs:
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: true
           tags: |
-            jerryhopper/demo-multiarch:latest
-            jerryhopper/demo-multiarch:${{ env.FUSIONAUTH_VERSION }}
+            ${{ secrets.DOCKERHUB_REPO }}:latest
+            ${{ secrets.DOCKERHUB_REPO }}:${{ env.FUSIONAUTH_VERSION }}
