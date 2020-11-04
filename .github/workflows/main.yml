@@ -31,7 +31,7 @@ jobs:
           context: .
           file: ./Dockerfile
           build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
-          platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/s390x
+          platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: true
           tags: |
             jerryhopper/demo-multiarch:latest
