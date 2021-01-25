@@ -4,7 +4,7 @@ jobs:
   multi:
     runs-on: ubuntu-latest
     env:
-        FUSIONAUTH_VERSION: 1.23.2
+        FUSIONAUTH_VERSION: 1.23.3
     steps:
       - 
         name: identify
