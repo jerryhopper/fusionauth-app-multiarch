@@ -2,13 +2,13 @@ name: ci
 on: [push]
 jobs:
   multi:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
-        FUSIONAUTH_VERSION: 1.28.1
+        APP_VERSION: 0.8.10
     steps:
       - 
         name: identify
-        run: echo ${{ env.FUSIONAUTH_VERSION }}
+        run: echo ${{ env.APP_VERSION }}
       -
         name: Checkout
         uses: actions/checkout@v2
@@ -30,9 +30,9 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
+          build-args: FUSIONAUTH_VERSION=${{ env.APP_VERSION }}
           platforms: linux/amd64,linux/arm/v7,linux/arm64
-          push: true
+          push: false
           tags: |
             ${{ secrets.DOCKERHUB_REPO }}:latest
-            ${{ secrets.DOCKERHUB_REPO }}:${{ env.FUSIONAUTH_VERSION }}
+            ${{ secrets.DOCKERHUB_REPO }}:${{ env.APP_VERSION }}
