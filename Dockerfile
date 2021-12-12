@@ -22,24 +22,24 @@ ARG FUSIONAUTH_VERSION=0
 RUN ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in\
     aarch64|arm64)\
-        ESUM='81ca31ad90f9bd789a2ca1753d6d83d10f4927876b4a4b9f4b1c4c8cbce85feb';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_aarch64_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='ea2de929e02f2e8bd3470ee8345a63299d81dfd086ee2f0af402239a8a9615f9';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_aarch64_linux_hotspot_2021-05-06-23-30.tar.gz';\
         ;;\
     armhf|armv7l|armel)\
-        ESUM='458d091756500dc3013737aa182a14752b3d4ffc358d09532201874ffb8cae22';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_arm_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='9fc0eada46dbf34f1583670521051a86599dabc9897c213bfbc6d7e2bfcd2bf7';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_arm_linux_hotspot_2021-05-06-23-30.tar.gz';\
         ;;\
     ppc64el|ppc64le)\
-        ESUM='bfdd77112d81256d4e1a859a465dd4dcb670019a5d6cf8260c30e24a0e5947e4';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_ppc64le_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='dcc626fc1c25460d5f37a4b0c015dc88de732fdbb08772344c36585982802704';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_ppc64le_linux_hotspot_2021-05-06-23-30.tar.gz';\
         ;;\
     s390x)\
-        ESUM='c13545924e92cb9d495282e95270f299a28d5466f9741c67791f131c38ebbd0c';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_s390x_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='5d690755935f7fc43417660505a8ce6d5a7a85c51817c96780d2e2e6193fc28b';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_s390x_linux_hotspot_2021-05-06-23-30.tar.gz';\
         ;;\
     amd64|x86_64)\
-        ESUM='9ddf9b35996fbd784a53fff3e0d59920a7d5acf1a82d4c8d70906957ac146cd1';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jdk_x64_linux_hotspot_14.0.1_7.tar.gz';\
+        ESUM='01343d891b63c03bf00eb205987e4816feb25b9249204ebf996ef7cbc94ec4a2';\
+        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_x64_linux_hotspot_2021-05-06-23-30.tar.gz';\
         ;;\
     *)\
         echo "Unsupported arch: ${ARCH}";\
