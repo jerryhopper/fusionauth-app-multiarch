@@ -22,8 +22,8 @@ ARG FUSIONAUTH_VERSION=0
 RUN ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in\
     aarch64|arm64)\
-        ESUM='ea2de929e02f2e8bd3470ee8345a63299d81dfd086ee2f0af402239a8a9615f9';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_aarch64_linux_hotspot_2021-05-06-23-30.tar.gz';\
+        ESUM='a5e954a4e89b50277f20345034aea0ccf06f53705d4ec586b268b14ff42468f7';\
+        BINARY_URL='https://download.oracle.com/java/17/archive/jdk-17.0.1_linux-aarch64_bin.tar.gz';\
         ;;\
     armhf|armv7l|armel)\
         ESUM='9fc0eada46dbf34f1583670521051a86599dabc9897c213bfbc6d7e2bfcd2bf7';\
