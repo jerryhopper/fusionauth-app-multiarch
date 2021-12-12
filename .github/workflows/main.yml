@@ -32,7 +32,7 @@ jobs:
           file: ./Dockerfile
           build-args: FUSIONAUTH_VERSION=${{ env.FUSIONAUTH_VERSION }}
           platforms: linux/amd64,linux/arm/v7,linux/arm64
-          push: true
+          push: false
           tags: |
             ${{ secrets.DOCKERHUB_REPO }}:latest
             ${{ secrets.DOCKERHUB_REPO }}:${{ env.FUSIONAUTH_VERSION }}
