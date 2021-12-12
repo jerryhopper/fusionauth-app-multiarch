@@ -24,24 +24,24 @@ ARG FUSIONAUTH_VERSION=0
 RUN ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in\
     aarch64|arm64)\
-        ESUM='a5e954a4e89b50277f20345034aea0ccf06f53705d4ec586b268b14ff42468f7';\
-        BINARY_URL='https://download.oracle.com/java/17/archive/jdk-17.0.1_linux-aarch64_bin.tar.gz';\
+        ESUM='f23d482b2b4ada08166201d1a0e299e3e371fdca5cd7288dcbd81ae82f3a75e3';\
+        BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.1_12.tar.gz';\
         ;;\
     armhf|armv7l|armel)\
-        ESUM='9fc0eada46dbf34f1583670521051a86599dabc9897c213bfbc6d7e2bfcd2bf7';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_arm_linux_hotspot_2021-05-06-23-30.tar.gz';\
+        ESUM='f5945a39929384235e7cb1c57df071b8c7e49274632e2a54e54b2bad05de21a5';\
+        BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_arm_linux_hotspot_17.0.1_12.tar.gz';\
         ;;\
     ppc64el|ppc64le)\
-        ESUM='dcc626fc1c25460d5f37a4b0c015dc88de732fdbb08772344c36585982802704';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_ppc64le_linux_hotspot_2021-05-06-23-30.tar.gz';\
+        ESUM='bd65d4e8ecc4236924ae34d2075b956799abca594021e1b40c36aa08a0d610b0';\
+        BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.1_12.tar.gz';\
         ;;\
     s390x)\
-        ESUM='5d690755935f7fc43417660505a8ce6d5a7a85c51817c96780d2e2e6193fc28b';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_s390x_linux_hotspot_2021-05-06-23-30.tar.gz';\
+        ESUM='dcc17e6ef28984656e997b6b8a6a31c89f45aff87a56b5d3819137c8f1050bef';\
+        BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_s390x_linux_hotspot_17.0.1_12.tar.gz';\
         ;;\
     amd64|x86_64)\
-        ESUM='6f25bcb94d3e22fb52a4632c74e03b403834e81b68701ab7ecd900fb9cd89f43';\
-        BINARY_URL='https://download.oracle.com/java/17/archive/jdk-17.0.1_linux-x64_bin.tar.gz';\
+        ESUM='6ea18c276dcbb8522feeebcfc3a4b5cb7c7e7368ba8590d3326c6c3efc5448b6';\
+        BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x64_linux_hotspot_17.0.1_12.tar.gz';\
         ;;\
     *)\
         echo "Unsupported arch: ${ARCH}";\
