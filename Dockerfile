@@ -40,8 +40,8 @@ RUN ARCH="$(dpkg --print-architecture)"; \
         BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_s390x_linux_hotspot_2021-05-06-23-30.tar.gz';\
         ;;\
     amd64|x86_64)\
-        ESUM='01343d891b63c03bf00eb205987e4816feb25b9249204ebf996ef7cbc94ec4a2';\
-        BINARY_URL='https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-2021-05-07-13-31/OpenJDK-jdk_x64_linux_hotspot_2021-05-06-23-30.tar.gz';\
+        ESUM='6f25bcb94d3e22fb52a4632c74e03b403834e81b68701ab7ecd900fb9cd89f43';\
+        BINARY_URL='https://download.oracle.com/java/17/archive/jdk-17.0.1_linux-x64_bin.tar.gz';\
         ;;\
     *)\
         echo "Unsupported arch: ${ARCH}";\
