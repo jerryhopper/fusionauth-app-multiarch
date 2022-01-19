@@ -16,7 +16,7 @@
 
 ###### Setup the java and fusionauth-app base #####################################################
 #FROM ubuntu:bionic as build
-FROM --platform=$BUILDPLATFORM ubuntu:focal as build
+FROM --platform=${ARCH} ubuntu:focal as build
 
 #ARG JDK_MODULES=java.base,java.compiler,java.desktop,java.instrument,java.management,java.naming,java.rmi,java.security.jgss,java.security.sasl,java.sql,java.xml.crypto,jdk.attach,jdk.crypto.ec,jdk.jdi,jdk.localedata,jdk.scripting.nashorn,jdk.unsupported
 ARG JDK_MODULES=java.base,java.compiler,java.desktop,java.instrument,java.logging,java.management,java.naming,java.rmi,java.security.jgss,java.security.sasl,java.scripting,java.sql,java.xml.crypto,jdk.attach,jdk.crypto.ec,jdk.dynalink,jdk.jdi,jdk.localedata,jdk.jpackage,jdk.unsupported,jdk.zipfs
