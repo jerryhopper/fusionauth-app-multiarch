@@ -65,7 +65,7 @@ RUN ARCH="$(dpkg --print-architecture)"; \
      && unzip -nq /tmp/fusionauth-app.zip -d /usr/local/fusionauth
 
 ###### Use Ubuntu latest and only copy in what we need to reduce the layer size ###################
-FROM ubuntu:bionic
+FROM --platform=$BUILDPLATFORM ubuntu:bionic
 RUN useradd -d /usr/local/fusionauth -U fusionauth
 COPY --from=build /opt/openjdk /opt/openjdk
 COPY --chown=fusionauth:fusionauth --from=build /usr/local/fusionauth /usr/local/fusionauth
